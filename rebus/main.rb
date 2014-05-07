@@ -82,7 +82,7 @@ post '/posts' do
   )
   @posts = Post.order(id: :desc)
   @post = @posts.first
-  # @created = true
+  @created = "created"
   redirect "/"
 end
 

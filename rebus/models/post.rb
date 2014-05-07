@@ -2,7 +2,7 @@
 # require 'instagram'
 
 class Post < ActiveRecord::Base
-  include Instagram
+  # include Instagram
 
   # def get_insta_photo(word)
   #   Instagram.get_insta_photo(word)
