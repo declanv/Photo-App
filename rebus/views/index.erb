@@ -19,17 +19,12 @@
 </form>
 
 
-<h1><%= @post.word_1 %></h1>
-<img src=<%= @post.word_1_url %>>
+  <h2><%= @post.word_1 %> <%= @post.word_2 %> <%= @post.word_3 %>  <%= @post.word_4 %> <%= @post.word_5 %></h2>
 
-<h1><%= @post.word_2 %></h1>
-<img src=<%= @post.word_2_url %>>
+<% @posts.each do |post| %>
+  <h1><%= post.word_1 %></h1>
+<% end %>
 
-<h1><%= @post.word_3 %></h1>
-<img src=<%= @post.word_3_url %>>
 
-<h1><%= @post.word_4 %></h1>
-<img src=<%= @post.word_4_url %>>
 
-<h1><%= @post.word_5 %></h1>
-<img src=<%= @post.word_5_url %>>
+
