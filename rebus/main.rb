@@ -16,24 +16,23 @@ require_relative 'models/post'
 
 # LIBRARIES
 
-require_relative 'instagram'
+require_relative 'lib/instagram'
 
 get '/' do
-  @posts = Post.all
   erb :index
 end
 
-get '/posts/new' do
-  # shows a form to input new post
-  erb :new
-end
+# get '/posts/new' do
+#   # shows a form to input new post
+#   erb :new
+# end
 
-get '/posts/:id' do
-  # show me a single post with given id
-  @post_id = params[:id]
-  @post = Post.find(@post_id)
-  erb :show
-end
+# get '/posts/:id' do
+#   # show me a single post with given id
+#   @post_id = params[:id]
+#   @post = Post.find(@post_id)
+#   erb :show
+# end
 
 # get '/posts/:id/delete' do
 #   # deletes a single post with given id
@@ -51,18 +50,22 @@ post '/posts' do
   word_3 = params[:word_3]
   word_4 = params[:word_4]
   word_5 = params[:word_5]
-
-
   Post.create(
-    word_1 = params[:word_1]
-    word_1_url =
-    word_2 = params[:word_2]
-
-    word_3 = params[:word_3]
-
-    word_4 = params[:word_4]
-
-    word_5 = params[:word_5]
+    word_1:  word_1,
+    word_1_url: Instagram.get_photo(word_1),
+    word_2:  word_2,
+    word_2_url:  Instagram.get_photo(word_2),
+    word_3:  word_3,
+    word_3_url:  Instagram.get_photo(word_3),
+    word_4:  word_4,
+    word_4_url:  Instagram.get_photo(word_4),
+    word_5:  word_5,
+    word_5_url:  Instagram.get_photo(word_5)
   )
+  @posts = Post.order(id: :desc)
+  @post = @posts.find(:last, :id)
+  @created = true
   redirect "/"
 end
+
+

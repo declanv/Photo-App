@@ -1,11 +1,11 @@
 # your MODELS inherit from ActiveRecord::Base class
-class Post < ActiveRecord::Base
 
+class Post < ActiveRecord::Base
   include Instagram
 
-  def get_insta_photo(word)
-    Instagram.get_insta_photo(word)
-  end
+  # def get_insta_photo(word)
+  #   Instagram.get_insta_photo(word)
+  # end
 
 end
 
