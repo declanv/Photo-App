@@ -1,13 +1,18 @@
-<ul class="posts">
-  <% @posts.each do |post| %>
-    <li>
-      <h2><a href="/posts/<%= post.id %> "><%= post.title %></a></h2>
-      <div>
-        <p><%= post.body %></p>
-        <p>
-          by <%= post.author %> on <%= post.created_at %>
-        </p>
-      </div>
-    </li>
-  <% end %>
-</ul>
+<form action="/posts" method="POST">
+  <p>
+    <input type="text" name="word_1" placeholder="I" />
+  </p>
+   <p>
+    <input type="text" name="word_2" placeholder="ate" />
+  </p>
+  <p>
+    <input type="text" name="word_3" placeholder="spaghetti" />
+  </p>
+  <p>
+    <input type="text" name="word_4" placeholder="on" />
+  </p>
+   <p>
+    <input type="text" name="word_5" placeholder="wednesday" />
+  </p>
+  <input type="submit" value="Create New Phrase" />
+</form>

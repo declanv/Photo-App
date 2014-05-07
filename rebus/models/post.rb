@@ -1,8 +1,12 @@
 # your MODELS inherit from ActiveRecord::Base class
 class Post < ActiveRecord::Base
 
-  # def author_photo
-  #   Facebook.get_photo(self.author)
-  # end
+  include Instagram
+
+  def get_insta_photo(word)
+    Instagram.get_insta_photo(word)
+  end
 
 end
+
+# get_insta_photo(@post.word_1)

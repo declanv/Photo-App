@@ -16,7 +16,7 @@ require_relative 'models/post'
 
 # LIBRARIES
 
-require_relative 'lib/facebook'
+require_relative 'instagram'
 
 get '/' do
   @posts = Post.all
@@ -35,25 +35,34 @@ get '/posts/:id' do
   erb :show
 end
 
-get '/posts/:id/delete' do
-  # deletes a single post with given id
-  post_id = params[:id]
-  post = Post.find(post_id)
-  post.destroy
-  redirect "/"
-  # "You have deleted #{post_id.to_s}"
-end
+# get '/posts/:id/delete' do
+#   # deletes a single post with given id
+#   post_id = params[:id]
+#   post = Post.find(post_id)
+#   post.destroy
+#   redirect "/"
+#   # "You have deleted #{post_id.to_s}"
+# end
 
 post '/posts' do
   # processes new post data
-  title = params[:title]
-  body = params[:body]
-  author = params[:author]
+  word_1 = params[:word_1]
+  word_2 = params[:word_2]
+  word_3 = params[:word_3]
+  word_4 = params[:word_4]
+  word_5 = params[:word_5]
+
 
   Post.create(
-    title: title,
-    body: body,
-    author: author
+    word_1 = params[:word_1]
+    word_1_url =
+    word_2 = params[:word_2]
+
+    word_3 = params[:word_3]
+
+    word_4 = params[:word_4]
+
+    word_5 = params[:word_5]
   )
   redirect "/"
 end

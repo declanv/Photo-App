@@ -1,5 +1,7 @@
 -- "schema" is the SQL code required to 'build' your database tables, etc.
 
+-- CREATE DATABASE rebus; --
+
 CREATE TABLE posts
 (
   id  serial NOT NULL primary key,
