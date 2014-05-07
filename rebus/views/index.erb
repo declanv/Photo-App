@@ -1,0 +1,13 @@
+<ul class="posts">
+  <% @posts.each do |post| %>
+    <li>
+      <h2><a href="/posts/<%= post.id %> "><%= post.title %></a></h2>
+      <div>
+        <p><%= post.body %></p>
+        <p>
+          by <%= post.author %> on <%= post.created_at %>
+        </p>
+      </div>
+    </li>
+  <% end %>
+</ul>
