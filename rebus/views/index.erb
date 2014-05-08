@@ -1,39 +1,68 @@
 
+<center>
+    <center><h1 class="logo">reBus</h1></center>
+    <p>
 <form action="/posts" method="POST">
-  <div class="main_input">
+  <!--<div class="main_input">-->
     <input class="main_input" type="text" name="input_1" placeholder="I" />
-   </div>
+   <!--</div>-->
 
-  <div class="main_input">
+  <!--<div class="main_input">-->
     <select name="input_2">
-    <option value="ran">ran</option>
-    <option value="ate">ate</option>
-    <option value="cooked">cooked</option>
+    <option value="ran">RAN</option>
+    <option value="ate">ATE</option>
+    <option value="cooked">COOKED</option>
+    <option value="lusted">LUSTED</option>
+    <option value="feared">FEARED</option>
+    <option value="probed">PROBED</option>
+    <option value="twerked">TWERKED</option>
     </select>
-  </div>
+  <!--</div>-->
 
-  <div class="main_input">
-    <input class="main_input" type="text" name="input_3" placeholder="spaghetti" />
-  </div>
+  <!--<div class="main_input">-->
+    <input class="main_input" type="text" name="input_3" placeholder="MILES" />
+  <!--</div>-->
   <!-- <p>
     <input type="text" name="word_4" placeholder="on" />
   </p> -->
-  <div class="main_input">
+  <!--<div class="main_input">-->
   <select name="input_4">
-    <option value="with">with</option>
-    <option value="while">while</option>
-    <option value="for">for</option>
+    <option value="for">FOR</option>
+    <option value="while">WHILE</option>
+    <option value="with">WITH</option>
+    <option value="in">IN</option>
+    <option value="on">ON</option>
+    <option value="of">OF</option>
+    <option value="from">FROM</option>
+    <option value="to">TO</option>
+    <option value="and">AND</option>
+    <option value="but">BUT</option>
+    <option value="thusly">THUSLY</option>
+    <option value="so">SO</option>
   </select>
+  <!--</div>-->
+
+   <!--<div class="main_input">-->
+    <input class="main_input" type="text" name="input_5" placeholder="BEER" />
+   <!--</div>-->
+   <!--<input class="main_input" type="submit" value="Create" />-->
+ </p><p><input type="submit" style="visibility: hidden;" />
+</form></p>
+
+<div class="phrase">
+<img class="word" src=<%= @post.input_1 %>> <h2 class="wword"><%= @post.input_2.upcase %></h2> <img class="word" src=<%= @post.input_3 %>> <h2 class="wword"><%= @post.input_4.upcase %></h2> <img class="word" src=<%= @post.input_5 %>>
+</center>
+</div>
+
+<center>
+  <div class="previous">
+    <div class="actual">
+<% @postal = Post.all %>
+<% @postall = @postal.order(id: :desc) %>
+<% @postall.each do |posty| %>
+<a href="#" class="post"><img class="word prev" src=<%= posty.input_1 %>><h2 class="wword pprev"><%= posty.input_2.upcase %></h2> <img class="word prev" src=<%= posty.input_3 %>> <h2 class="wword pprev"><%= posty.input_4.upcase %></h2> <img class="word prev" src=<%= posty.input_5 %>></a>
+<% end %>
+    </div>
   </div>
-
-   <div class="main_input">
-    <input class="main_input" type="text" name="input_5" placeholder="wednesday" />
-   </div>
-  <input class="main_input" type="submit" value="Create New Phrase" />
-</form>
-
-
-<img src=<%= @post.input_1 %>> <h2><%= @post.input_2 %></h2> <img src=<%= @post.input_3 %>> <h2><%= @post.input_4 %></h2> <img src=<%= @post.input_5 %>>
-
-
+</center>
 
