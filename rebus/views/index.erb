@@ -1,21 +1,35 @@
 
 <form action="/posts" method="POST">
-  <p>
-    <input type="text" name="word_1" placeholder="I" />
-  </p>
-   <p>
-    <input type="text" name="word_2" placeholder="ate" />
-  </p>
-  <p>
-    <input type="text" name="word_3" placeholder="spaghetti" />
-  </p>
-  <p>
+  <div class="main_input">
+    <input class="main_input" type="text" name="word_1" placeholder="I" />
+   </div>
+
+  <div class="main_input">
+    <select name="word_2">
+    <option value="ran">ran</option>
+    <option value="ate">ate</option>
+    <option value="cooked">cooked</option>
+    </select>
+  </div>
+
+  <div class="main_input">
+    <input class="main_input" type="text" name="word_3" placeholder="spaghetti" />
+  </div>
+  <!-- <p>
     <input type="text" name="word_4" placeholder="on" />
-  </p>
-   <p>
-    <input type="text" name="word_5" placeholder="wednesday" />
-  </p>
-  <input type="submit" value="Create New Phrase" />
+  </p> -->
+  <div class="main_input">
+  <select name="word_4">
+    <option value="with">with</option>
+    <option value="while">while</option>
+    <option value="for">for</option>
+  </select>
+  </div>
+
+   <div class="main_input">
+    <input class="main_input" type="text" name="word_5" placeholder="wednesday" />
+   </div>
+  <input class="main_input" type="submit" value="Create New Phrase" />
 </form>
 
 
@@ -23,11 +37,5 @@
 
 
 
-
-<% @posts.each do |post| %>
-  <h1><%= post.word_1 %></h1>
-<% end %>
-
-
-
+<%= @word_1 %>
 

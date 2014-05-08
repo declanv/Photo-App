@@ -56,6 +56,7 @@ end
  #    image_url
  #  end
 
+
 post '/posts' do
   # processes new post data
   word_1 = params[:word_1]
@@ -63,11 +64,16 @@ post '/posts' do
   word_3 = params[:word_3]
   word_4 = params[:word_4]
   word_5 = params[:word_5]
-  photo_1 = Instagram.get_photo(word_1)
-  photo_2 = Instagram.get_photo(word_2)
-  photo_3 = Instagram.get_photo(word_3)
-  photo_4 = Instagram.get_photo(word_4)
-  photo_5 = Instagram.get_photo(word_5)
+  # photo_1 = Instagram.get_photo(word_1)
+  # photo_2 = Instagram.get_photo(word_2)
+  # photo_3 = Instagram.get_photo(word_3)
+  # photo_4 = Instagram.get_photo(word_4)
+  # photo_5 = Instagram.get_photo(word_5)
+  photo_1 = ""
+  photo_2 = ""
+  photo_3 = ""
+  photo_4 = ""
+  photo_5 = ""
   Post.create(
     word_1:  word_1,
     word_1_url: photo_1,

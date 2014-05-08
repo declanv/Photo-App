@@ -1,0 +1,13 @@
+div{
+  display: inline;
+}
+
+.main_input div{
+  display: inline;
+  float: left;
+}
+
+form{
+  margin: 0;
+  padding: 0;
+}
