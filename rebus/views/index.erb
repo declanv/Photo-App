@@ -1,11 +1,11 @@
 
 <form action="/posts" method="POST">
   <div class="main_input">
-    <input class="main_input" type="text" name="word_1" placeholder="I" />
+    <input class="main_input" type="text" name="input_1" placeholder="I" />
    </div>
 
   <div class="main_input">
-    <select name="word_2">
+    <select name="input_2">
     <option value="ran">ran</option>
     <option value="ate">ate</option>
     <option value="cooked">cooked</option>
@@ -13,13 +13,13 @@
   </div>
 
   <div class="main_input">
-    <input class="main_input" type="text" name="word_3" placeholder="spaghetti" />
+    <input class="main_input" type="text" name="input_3" placeholder="spaghetti" />
   </div>
   <!-- <p>
     <input type="text" name="word_4" placeholder="on" />
   </p> -->
   <div class="main_input">
-  <select name="word_4">
+  <select name="input_4">
     <option value="with">with</option>
     <option value="while">while</option>
     <option value="for">for</option>
@@ -27,15 +27,13 @@
   </div>
 
    <div class="main_input">
-    <input class="main_input" type="text" name="word_5" placeholder="wednesday" />
+    <input class="main_input" type="text" name="input_5" placeholder="wednesday" />
    </div>
   <input class="main_input" type="submit" value="Create New Phrase" />
 </form>
 
 
-<h2><%= @post.word_1 %> <%= @post.word_2 %> <%= @post.word_3 %>  <%= @post.word_4 %> <%= @post.word_5 %></h2>
+<img src=<%= @post.input_1 %>> <h2><%= @post.input_2 %></h2> <img src=<%= @post.input_3 %>> <h2><%= @post.input_4 %></h2> <img src=<%= @post.input_5 %>>
 
 
-
-<%= @word_1 %>
 
