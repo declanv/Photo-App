@@ -1,0 +1,37 @@
+<center>
+    <center><h1 class="logo">reBus</h1></center>
+
+
+<%= form_for @post, url: "/posts/create", method: "post" do |f| %>
+        <%= f.text_field :input_1 %>
+        <%= f.select :input_2, ['RAN' ,'ATE' ,'SMOKED' ,'BOUGHT', 'COOKED', 'LUSTED', 'FEARED', 'TWERKED'] %>
+        <%= f.text_field :input_3 %>
+        <%= f.select :input_4, ['FOR', 'AT', 'WHILE', 'WITH', 'IN', 'ON', 'OF', 'FROM', 'TO', 'AND', 'BUT', 'SO'] %>
+        <%= f.text_field :input_5 %>
+    <p><%= f.submit "Create", :class => "create" %></p>
+    <% end %>
+
+
+<div class="phrase">
+
+<img class="word" src=<%= @last[:input_1] %>> <h2 class="wword"><%= @last[:input_2] %></h2> <img class="word" src=<%= @last[:input_3] %>> <h2 class="wword"><%= @last[:input_4] %></h2> <img class="word" src=<%= @last[:input_5] %>>
+
+</center>
+</div>
+
+<center>
+<div class="previous">
+  <div class="actual">
+
+      <% @posts.each do |post| %>
+      <a href="#" class="post">
+      <img class="word prev" src=<%= post[:input_1] %>>
+      <h2 class="wword pprev"> <%= post[:input_2] %></h2>
+      <img class="word prev"src=<%= post[:input_3] %>>
+      <h2 class="wword pprev"><%= post[:input_4] %></h2>
+      <img class="word prev" src=<%= post[:input_5] %>>
+      </a>
+    <% end %>
+  </div>
+</div>
+</center>
