@@ -3,11 +3,11 @@
 
 
 <%= form_for @post, url: "/posts/create", method: "post" do |f| %>
-        <%= f.text_field :input_1 %>
+        <%= f.text_field :input_1, :placeholder => 'I' %>
         <%= f.select :input_2, ['RAN' ,'ATE' ,'SMOKED' ,'BOUGHT', 'COOKED', 'LUSTED', 'FEARED', 'TWERKED'] %>
-        <%= f.text_field :input_3 %>
+        <%= f.text_field :input_3, :placeholder => 'MILES' %>
         <%= f.select :input_4, ['FOR', 'AT', 'WHILE', 'WITH', 'IN', 'ON', 'OF', 'FROM', 'TO', 'AND', 'BUT', 'SO'] %>
-        <%= f.text_field :input_5 %>
+        <%= f.text_field :input_5, :placeholder  => 'BEER' %>
     <p><%= f.submit "Create", :class => "create" %></p>
     <% end %>
 
