@@ -122,13 +122,13 @@ border: solid black;
   visibility: hidden;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .word {
   height: 70px;
 }
 
 input {
-      width: 70px;
+      width: 60px;
       margin: 2px;
 }
 
@@ -160,3 +160,18 @@ height: 40px;
   top: -22px;
 }
   }
+@media (max-width: 400px) {
+  .previous {
+    width: 300px;
+  }
+  input {
+    width: 48px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+  select {
+    width: 48px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
